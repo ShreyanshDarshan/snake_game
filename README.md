@@ -12,6 +12,7 @@
 - [ ] UI start, pause, play : `30th, 8:00pm`
 
 The game should be done by now, polishing after this stage
+
 ------------------- Polishing ----------------------------------------
 - [ ] Particle effects : `30th, 9:00pm`
 - [ ] Physics Based Animations (if allowed) : `30th, 10:00pm`
