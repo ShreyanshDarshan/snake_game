@@ -8,6 +8,7 @@ TagManager:
   - LeftWall
   - RightWall
   - BottomWall
+  - Snake
   layers:
   - Default
   - TransparentFX

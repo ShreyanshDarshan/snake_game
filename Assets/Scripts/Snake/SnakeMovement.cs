@@ -9,7 +9,8 @@ public class SnakeMovement : MonoBehaviour
     Rigidbody2D rigidbody;
     [SerializeField] SliderControl slider;
     private Vector2 ReferenceVelocity;
-
+    [SerializeField] Animator anim;
+    [SerializeField] float defaultAnimSpeed = 1.8f;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +47,13 @@ public class SnakeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Calculate difference between snake's heading direction and velocity direction
         float headingOffsetAngle = Vector2.SignedAngle(transform.up, rigidbody.velocity);
+        // Lerp the angle of rotation so that snake slowly turns towards the velocity direction
         float currentTurnAngle = Mathf.Lerp(0, headingOffsetAngle, turnSpeed * Time.deltaTime);
         transform.Rotate(new Vector3(0, 0, currentTurnAngle));
+
+        // Setting the animation speed to match the movement speed
+        anim.speed = movementSpeed / defaultAnimSpeed;
     }
 }
