@@ -3,9 +3,9 @@
 ## Task List and Timeline
 - [x] Scene Setup : `30th, 5:30am`
 - [x] Tile generation and Camera position : `30th, 6:30 am`
-- [ ] Snake movement : `30th, 7:00am`
+- [x] Snake movement : `30th, 7:00am`
 - [ ] Snake controller : `30th, 7:30am`
-- [ ] Snake animations : `30th, 8:00am`
+- [x] Snake animations : `30th, 8:00am`
 
 ------------------- Classes : `8:00 am to 7:00pm` --------------------
 - [ ] Tile Color Change : `30th, 7:30pm`
