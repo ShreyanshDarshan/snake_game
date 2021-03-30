@@ -1,8 +1,8 @@
 # snake_game
 
 ## Task List and Timeline
-- [ ] Scene Setup : `30th, 5:30am`
-- [ ] Tile generation and Camera position : `30th, 6:30 am`
+- [x] Scene Setup : `30th, 5:30am`
+- [x] Tile generation and Camera position : `30th, 6:30 am`
 - [ ] Snake movement : `30th, 7:00am`
 - [ ] Snake controller : `30th, 7:30am`
 - [ ] Snake animations : `30th, 8:00am`
