@@ -17,20 +17,6 @@ public class SnakeMovement : MonoBehaviour
         rigidbody.velocity = transform.up * movementSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "TopWall" || collision.tag == "BottomWall")
-        {
-            Debug.Log("horizontal");
-            rigidbody.velocity *= new Vector2(1, -1);
-        }
-        if (collision.tag == "LeftWall" || collision.tag == "RightWall")
-        {
-            Debug.Log("vertical");
-            rigidbody.velocity *= new Vector2(-1, 1);
-        }
-    }
-
     // rotate a Vector2 by an angle
     public static Vector2 rotate(Vector2 v, float angle)
     {
@@ -53,7 +39,7 @@ public class SnakeMovement : MonoBehaviour
         rigidbody.velocity = rigidbody.velocity.normalized * movementSpeed;
         if (rigidbody.velocity.magnitude < 0.2f)
         {
-            rigidbody.velocity = transform.up * movementSpeed;
+            rigidbody.velocity = -transform.up * movementSpeed;
         }
     }
 
