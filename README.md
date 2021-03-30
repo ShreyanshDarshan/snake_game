@@ -4,11 +4,11 @@
 - [x] Scene Setup : `30th, 5:30am`
 - [x] Tile generation and Camera position : `30th, 6:30 am`
 - [x] Snake movement : `30th, 7:00am`
-- [ ] Snake controller : `30th, 7:30am`
+- [x] Snake controller : `30th, 7:30am`
 - [x] Snake animations : `30th, 8:00am`
 
 ------------------- Classes : `8:00 am to 7:00pm` --------------------
-- [ ] Tile Color Change : `30th, 7:30pm`
+- [x] Tile Color Change : `30th, 7:30pm`
 - [ ] Pizza Spawn and Collect : `30th, 8:00pm`
 - [ ] UI start, pause, play : `30th, 9:00pm`
 
