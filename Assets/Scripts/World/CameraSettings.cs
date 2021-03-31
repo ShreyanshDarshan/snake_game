@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraSettings : MonoBehaviour
 {
     Camera cam;
-    public TileGeneration tilegen;
+    [SerializeField] TileGeneration tilegen;
     [SerializeField] float extraSpacePercent = 10;
     // Start is called before the first frame update
     void Start()

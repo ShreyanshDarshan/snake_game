@@ -87,4 +87,19 @@ public class TileGeneration : MonoBehaviour
         valid_index = (index-1) % Tiles.Count;
         return Tiles[valid_index].transform.position;
     }
+
+    // function to give number of unwalked tiles
+    public int GetNumUnwalked()
+    {
+        int numWalkedTiles = 0;
+        foreach (GameObject tile in Tiles)
+        {
+            if (tile.GetComponent<ChangeTileColor>().isWalked == false)
+            {
+                // for each unwalked tile, add to the count
+                numWalkedTiles += 1;
+            }
+        }
+        return numWalkedTiles;
+    }
 }
