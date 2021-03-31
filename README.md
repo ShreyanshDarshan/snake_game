@@ -18,3 +18,7 @@ The game should be done by now, polishing after this stage
 - [x] Particle effects : `30th, 10:00pm`
 - [ ] Physics Based Animations (if allowed) : `30th, 11:00pm`
 - [ ] Better assets : `30th, 12:00pm`
+
+## Final Result
+
+![](snake_game.gif)
