@@ -9,14 +9,12 @@
 
 ------------------- Classes : `8:00 am to 7:00pm` --------------------
 - [x] Tile Color Change : `30th, 7:30pm`
-- [ ] Pizza Spawn and Collect : `30th, 8:00pm`
-- [ ] UI start, pause, play : `30th, 9:00pm`
+- [x] Pizza Spawn and Collect : `30th, 8:00pm`
+- [x] UI start, pause, play : `30th, 9:00pm`
 
 The game should be done by now, polishing after this stage
 
 ------------------- Polishing ----------------------------------------
-- [ ] Particle effects : `30th, 10:00pm`
+- [x] Particle effects : `30th, 10:00pm`
 - [ ] Physics Based Animations (if allowed) : `30th, 11:00pm`
 - [ ] Better assets : `30th, 12:00pm`
-
-I will keep updating this readme as I complete the tasks. Also, I might take more time after 12:00 pm to think of ways to polish it more / add features, if that is allowed.
