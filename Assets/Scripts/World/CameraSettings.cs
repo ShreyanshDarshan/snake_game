@@ -17,10 +17,4 @@ public class CameraSettings : MonoBehaviour
         cam.orthographicSize = (100 + extraSpacePercent) * tilegen.N / 200.0f;
         Debug.Log(cam.aspect);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

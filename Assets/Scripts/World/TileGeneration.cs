@@ -10,16 +10,21 @@ public class TileGeneration : MonoBehaviour
     public int N = 10;
     public float WallWidth = 0.3f;
     public float TileWidth = 1f;
-    // Start is called before the first frame update
-    void Start()
+    private List<GameObject> Tiles; 
+
+    // Awake is called before Start, so it helps get things set up before other scripts access the tile data
+    void Awake()
     {
+        Tiles = new List<GameObject>();
+        
         // spawning tiles in an N x M grid
         for (int i=0; i<M; i++)
         {
             for (int j=0; j<N; j++)
             {
                 Vector3 tile_spawn_pos = new Vector3(i, j, 0) * TileWidth;
-                Instantiate(tile, tile_spawn_pos, Quaternion.identity);
+                // storing the spawned tile in the list
+                Tiles.Add( Instantiate(tile, tile_spawn_pos, Quaternion.identity, transform) );
             }
         }
 
@@ -61,9 +66,25 @@ public class TileGeneration : MonoBehaviour
         right_wall.tag = "RightWall";
     }
 
-    // Update is called once per frame
-    void Update()
+    public Vector2 GetRandomPosition()
     {
-        
+        // get a random number smaller than the size of the tiles list
+        int randomVal = Random.Range(0, Tiles.Count);
+        int index = 0;
+        int counter = 0;
+        int valid_index;
+        // spin a roullette of all the unwalked tiles by that random number
+        while (counter < randomVal)
+        {
+            valid_index = index % Tiles.Count;
+            if (Tiles[valid_index].GetComponent<ChangeTileColor>().isWalked == false)
+            {
+                counter += 1;
+            }
+            index += 1;
+        }
+        // return the position of the tile on which the roullette lands
+        valid_index = (index-1) % Tiles.Count;
+        return Tiles[valid_index].transform.position;
     }
 }

@@ -9,6 +9,9 @@ TagManager:
   - RightWall
   - BottomWall
   - Snake
+  - Food
+  - Counter
+  - SnakeHead
   layers:
   - Default
   - TransparentFX

@@ -29,15 +29,20 @@ public class SnakeMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        // check if input is being given
         if (slider.isTurning)
         {
+            // modify the velocity according to the input given
             rigidbody.velocity = rotate(ReferenceVelocity, slider.RotAngle);
         }
+        // if not, set the reference velocity (used to determine where to turn to when input is given)
         else
         {
             ReferenceVelocity = rigidbody.velocity;
         }
+        // maintain the speed of the snake (if it slows down)
         rigidbody.velocity = rigidbody.velocity.normalized * movementSpeed;
+        // if the snake stops/ gets stuck, move backwards
         if (rigidbody.velocity.magnitude < 0.2f)
         {
             rigidbody.velocity = -transform.up * movementSpeed;
